@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -115,13 +115,13 @@ const AnimatedRoutes = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <EasterEggListener />
       <div className='relative z-0 bg-primary'>
         <AnimatedRoutes />
         <FloatingButtons />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
