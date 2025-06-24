@@ -26,6 +26,15 @@ const MainContent = () => {
         }
       }, 200);
     }
+    // Scroll to section if scrollTo is set in state (from Navbar)
+    if (location.state && location.state.scrollTo) {
+      setTimeout(() => {
+        const el = document.getElementById(location.state.scrollTo);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 200);
+    }
   }, [location.state]);
 
   return (

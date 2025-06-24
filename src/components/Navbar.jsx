@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -15,6 +15,9 @@ const Navbar = () => {
     }
     return "dark";
   });
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +48,21 @@ const Navbar = () => {
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
+  // Handles navigation to section, even from other routes
+  const handleNavClick = (id, title) => {
+    setActive(title);
+    setToggle(false);
+    if (location.pathname !== "/" && location.pathname !== "/home") {
+      navigate("/home", { state: { scrollTo: id } });
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.location.hash = id;
+      }
+    }
   };
 
   return (
@@ -78,9 +96,9 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavClick(nav.id, nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <span>{nav.title}</span>
             </li>
           ))}
         </ul>
@@ -105,12 +123,9 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  onClick={() => handleNavClick(nav.id, nav.title)}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <span>{nav.title}</span>
                 </li>
               ))}
             </ul>
