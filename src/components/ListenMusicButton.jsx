@@ -1,28 +1,29 @@
 import React, { useState, useRef } from "react";
 
+const BASE = import.meta.env.BASE_URL;
 const SONGS = [
   {
     title: "505",
     artist: "Arctic Monkeys",
-    url: "/music/505.mp3",
+    url: `${BASE}music/505.mp3`,
     cover: "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=80&h=80&fit=crop&crop=center",
   },
   {
     title: "After Hours",
     artist: "The Weeknd",
-    url: "/music/After Hours.mp3",
+    url: `${BASE}music/After Hours.mp3`,
     cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=80&h=80&fit=crop&crop=center",
   },
   {
     title: "Popular",
     artist: "The Weeknd, Madonna, Playboi Carti",
-    url: "/music/The Weeknd, Madonna, Playboi Carti - Popular (Official Music Video).mp3",
+    url: `${BASE}music/The Weeknd, Madonna, Playboi Carti - Popular (Official Music Video).mp3`,
     cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=80&h=80&fit=crop&crop=center",
   },
   {
     title: "Timeless",
     artist: "The Weeknd, Playboi Carti",
-    url: "/music/The Weeknd  Timeless with Playboi Carti (Official Music Video).mp3",
+    url: `${BASE}music/The Weeknd  Timeless with Playboi Carti (Official Music Video).mp3`,
     cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=80&h=80&fit=crop&crop=center",
   },
 ];

@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 
+const BASE = import.meta.env.BASE_URL;
+
 const setup = [
   {
     name: "My Desk Setup",
-    image: "/desk-setup.jpg",
+    image: `${BASE}desk-setup.jpg`,
     description: "My personal workspace where I build and test mechanical keyboards, featuring a clean setup for maximum focus and creativity."
   },
   {
     name: "Gaming Setup",
-    image: "/gaming-setup.jpg",
+    image: `${BASE}gaming-setup.jpg`,
     description: "A high-performance gaming setup with a Logitech racing wheel, RGB lighting, and immersive display for the ultimate racing experience."
   }
 ];

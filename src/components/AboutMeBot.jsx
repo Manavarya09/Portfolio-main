@@ -25,7 +25,7 @@ const AboutMeBot = () => {
         {
           from_name: "Anonymous User",
           to_name: "Manavarya Singh",
-          from_email: "portfolio-bot@example.com",
+          reply_to: "portfolio-bot@example.com", // Changed from from_email to reply_to
           to_email: email,
           message: question,
         },
@@ -133,4 +133,4 @@ const AboutMeBot = () => {
   );
 };
 
-export default AboutMeBot; 
+export default AboutMeBot;

@@ -38,7 +38,8 @@ const Contact = () => {
         {
           from_name: form.name,
           to_name: "Manavarya Singh",
-          from_email: form.email,
+          reply_to: form.email, // This makes emails reply to the sender
+          sender_email: form.email, // Additional parameter for sender's email
           to_email: "smanavarya@gmail.com",
           message: form.message,
         },

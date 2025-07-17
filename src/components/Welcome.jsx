@@ -175,7 +175,7 @@ const Welcome = () => {
         </div>
       )}
       {/* Space warp sound */}
-      <audio ref={audioRef} src="/warp-sound.mp3" preload="auto" />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}warp-sound.mp3`} preload="auto" />
       <style>{`
         .animate-bounce-on-hover:hover {
           animation: bounce 0.5s;

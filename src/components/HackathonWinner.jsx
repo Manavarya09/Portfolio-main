@@ -11,7 +11,7 @@ const hackathonData = {
   institution: "Birla Institute Of Technology and Science, Pilani Dubai Campus",
   prize: "AED 2000",
   description: "Won first place at the Hackathon organized by BITS Pilani, Dubai Campus in collaboration with HPE Aruba Networking.",
-  image: "/hackathon-certificate.jpg",
+  image: `${import.meta.env.BASE_URL}hackathon-certificate.jpg`,
   icon: "🏆"
 };
 

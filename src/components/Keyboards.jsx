@@ -3,20 +3,22 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { useNavigate } from "react-router-dom";
 
+const BASE = import.meta.env.BASE_URL;
+
 const keyboards = [
-  { name: "Keychron Q1 Pro", image: "/Keyboard1.jpg" },
-  { name: "Keychron V1", image: "/Keyboard2.jpg" },
-  { name: "Keychron K8 Pro", image: "/Keyboard3.jpg" },
-  { name: "CIDOO ABM066", image: "/Keyboard4.jpg" },
-  { name: "EPOMAKER x Feker Galaxy80", image: "/Keyboard5.jpg" },
-  { name: "EPOMAKER Mini Panda 64", image: "/Keyboard6.jpg" },
-  { name: "K500F MACHENIKE ", image: "/Keyboard7.jpg" },
-  { name: "SKYLOONG GK61", image: "/Keyboard8.jpg" },
-  { name: "REDRAGON K617 FIZZ", image: "/Keyboard9.jpg" },
-  { name: "CIY 68", image: "/Keyboard10.jpg" },
-  { name: "BAJEAL 87", image: "/Keyboard11.jpg" },
-  { name: "Hexgears M2", image: "/Keyboard12.jpg" },
-  { name: "EPOMAKER EK21", image: "/Keyboard13.jpg" },
+  { name: "Keychron Q1 Pro", image: `${BASE}Keyboard1.jpg` },
+  { name: "Keychron V1", image: `${BASE}Keyboard2.jpg` },
+  { name: "Keychron K8 Pro", image: `${BASE}Keyboard3.jpg` },
+  { name: "CIDOO ABM066", image: `${BASE}Keyboard4.jpg` },
+  { name: "EPOMAKER x Feker Galaxy80", image: `${BASE}Keyboard5.jpg` },
+  { name: "EPOMAKER Mini Panda 64", image: `${BASE}Keyboard6.jpg` },
+  { name: "K500F MACHENIKE ", image: `${BASE}Keyboard7.jpg` },
+  { name: "SKYLOONG GK61", image: `${BASE}Keyboard8.jpg` },
+  { name: "REDRAGON K617 FIZZ", image: `${BASE}Keyboard9.jpg` },
+  { name: "CIY 68", image: `${BASE}Keyboard10.jpg` },
+  { name: "BAJEAL 87", image: `${BASE}Keyboard11.jpg` },
+  { name: "Hexgears M2", image: `${BASE}Keyboard12.jpg` },
+  { name: "EPOMAKER EK21", image: `${BASE}Keyboard13.jpg` },
 ];
 
 const Keyboards = () => {

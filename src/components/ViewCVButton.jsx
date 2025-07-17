@@ -1,6 +1,6 @@
 import React from "react";
 
-const CV_LINK = "/cv.pdf"; // Points to cv.pdf in the public folder
+const CV_LINK = `${import.meta.env.BASE_URL}cv.pdf`; // Points to cv.pdf in the public folder
 
 const ViewCVButton = () => (
   <div className="fixed bottom-6 left-6 z-50 group">
